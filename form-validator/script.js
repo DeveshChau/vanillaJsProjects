@@ -49,10 +49,17 @@ function checkEmail(input) {
 	}
 }
 
+function checkPasswordsMatch(input1, input2) {
+	if (input1.value !== input2.value) {
+	  showError(input2, 'Passwords do not match');
+	}
+}
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 	checkRequired([username, email, password, password2]);
 	checkLength(username, 3, 15);
 	checkLength(password, 6, 25);
 	checkEmail(email)
+	checkPasswordsMatch(password, password2)
 })
