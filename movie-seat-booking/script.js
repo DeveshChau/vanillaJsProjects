@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
-const movieTicket = document.getElementById('movie');
+const movieTicket = document.getElementById("movie");
 let ticketPrice = +movieTicket.value;
 
 function updateSelectedCount() {
@@ -18,5 +18,10 @@ container.addEventListener("click", (e) => {
   ) {
     e.target.classList.toggle("selected");
   }
+  updateSelectedCount();
+});
+
+movieTicket.addEventListener("change", (e) => {
+  ticketPrice = e.target.value;
   updateSelectedCount();
 });
