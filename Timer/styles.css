@@ -1,0 +1,21 @@
+/* Custom styles for the progress bar */
+#progressBreak, #progress {
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    background-color: lightgray; /* Default background color */
+}
+
+/* Change the color of the progress bar */
+#progressBreak,::-webkit-progress-value #progress::-webkit-progress-value {
+    background-color: green; /* Change color for WebKit browsers (Chrome, Safari, etc.) */
+}
+
+#progressBreak,::-moz-progress-bar #progress::-moz-progress-bar {
+    background-color: green; /* Change color for Firefox */
+}
+
+#progressBreak,::-ms-fill #progress::-ms-fill {
+    background-color: green; /* Change color for Microsoft Edge */
+}
